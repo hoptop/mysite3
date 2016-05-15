@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block page_content %}
+<div class="container">
+    <div class="row">
+        <h1>Hello,<mark>
+        {% if current_user.is_authenticated %}
+            {{ current_user.username }}
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="http://music.163.com/outchain/player?type=0&id=36591745&auto=1&height=430"></iframe>
+                </div>
+            </div>
+        {% else %}
+            Stranger
+        {% endif %}</mark>!</h1>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
